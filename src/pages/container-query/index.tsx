@@ -63,11 +63,22 @@ const ContainerQueryTestPage: NextPage = () => {
         <div className="flex-1 w-full h-0 flex flex-row items-cetner">
           <LeftSideBar isView={pageState.sidebars.left.isView} />
           <div className="flex-1 w-0 h-full p-4 shadow-inner shadow-stone-300">
-            <div className="w-full h-max bg-amber-100 text-stone-900 p-4 shadow-md rounded-md">
-              <h2 className="text-2xl">コンテナクエリの実装のテスト</h2>
-              <h3 className="text-md">
-                画面の大きさやサイドバーの有無等によってクエリが働くか検証する
-              </h3>
+            <div className="flex flex-col gap-4 p-4">
+              <div className="@container w-full">
+                <div className="border bg-blue-50 border-blue-300 @[600px]:bg-red-50 @[600px]:border-red-300 p-8">
+                  Sample
+                </div>
+              </div>
+              <div className="@container w-full">
+                <div className="border bg-blue-50 border-blue-300 @[600px]:bg-red-50 @[600px]:border-red-300 p-8">
+                  Sample
+                </div>
+              </div>
+              <div className="@container w-full">
+                <div className="border bg-blue-50 border-blue-300 @[600px]:bg-red-50 @[600px]:border-red-300 p-8">
+                  Sample
+                </div>
+              </div>
             </div>
           </div>
           <RightSideBar isView={pageState.sidebars.right.isView} />
